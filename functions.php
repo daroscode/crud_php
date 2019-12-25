@@ -30,7 +30,6 @@ if ($result) {
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $query = "SELECT * FROM users WHERE id = {$_GET['id']}";
     $query = $db->query($query);
-    $result = $query->rowCount();
     $update = $query->fetchAll();
 }
 
